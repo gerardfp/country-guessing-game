@@ -1,0 +1,23 @@
+version: "3.8"
+name: my-app
+services:
+  create:
+    user: "${UID}"
+    image: node:19-alpine
+    profiles:
+      - create
+    working_dir: /svelte
+    command: sh -c "npm create svelte@latest ${COMPOSE_PROJECT_NAME} && cd ${COMPOSE_PROJECT_NAME} && npm install"
+    volumes:
+      - ./:/svelte
+    stdin_open: true
+    tty: true
+
+  my-app:
+    image: node:16-alpine
+    command: npm run dev -- --host
+    ports:
+      - 2000:5173
+    volumes:
+      - ./${COMPOSE_PROJECT_NAME}:/${COMPOSE_PROJECT_NAME}
+    working_dir: /${COMPOSE_PROJECT_NAME}
