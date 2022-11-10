@@ -3,7 +3,7 @@
 <World on:countryClicked={handleClick} />
 
 <script>
-    import World, { elements, getRandomCountry } from './world.svelte'
+    import { World, getRandomCountry } from 'mapa-mundi'
     import { onMount } from 'svelte';
 
     let guessCountry, wins = 0, fails = 0;
@@ -19,7 +19,6 @@
 
     onMount(() => {
 		nextCountry();
-        console.log(elements);
     })
 
     function nextCountry(){
