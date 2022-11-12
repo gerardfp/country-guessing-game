@@ -1,4 +1,7 @@
 # country-guessing-game
+
+Play: https://gerardfp.github.io/country-guessing-game
+
 ``` 
 docker compose up
 ```
