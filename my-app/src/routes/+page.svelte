@@ -6,7 +6,6 @@
 <script>
     import { World, getRandomCountry } from 'mapa-mundi'
     import { onMount } from 'svelte';
-
     let guessCountry="_", clickedCountry="_", wins = 0, fails = 0, win, fail;
 
     function handleClick(event) {
