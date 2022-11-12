@@ -1,7 +1,8 @@
 # country-guessing-game
 
-Play: https://gerardfp.github.io/country-guessing-game
+## Play: https://gerardfp.github.io/country-guessing-game
 
+## dev
 ``` 
 docker compose up
 ```
